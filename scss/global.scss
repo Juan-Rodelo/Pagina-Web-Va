@@ -1,0 +1,152 @@
+/* HEADER */
+*
+{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  text-decoration: none;
+
+}
+
+/* variables */
+$html-background: color(primary);
+$html-font: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+$nav-background: color(accent);
+$nav-width: 20rem;
+$nav-z-index: 1;
+$nav-toggle-bar-height: 0.4rem;
+$nav-toggle-bar-width: 3.6rem;
+$nav-toggle-z-index: 2;
+
+.main_header {
+  position: relative;
+
+}
+
+@media (min-width: 700px){
+
+.header_wrapper {
+    display: flex;
+  	align-items: center;
+  	justify-content: space-between;
+    padding: 15px 10%;
+    // border-bottom: 1px solid #696969;
+  }
+
+.logo_header {
+  cursor: pointer;
+}
+
+/* bar */
+.toggle{
+cursor:pointer;
+list-style: none;
+}
+
+.menu_icon{
+  display: inline-block; /* makes them side by side */
+  position: relative;
+  }
+}
+
+li, a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: grey;
+  list-style: none;
+}
+
+/* Open Menu */
+@media (max-width: 699px){
+
+  .header_wrapper {
+    display: flex;
+  	align-items: center;
+  	justify-content: space-between;
+  	flex-wrap: wrap;
+    padding: 30px 5%;
+  }
+
+.toggle{
+  cursor:pointer;
+  }
+
+.menu_icon{
+    display: inline-block;
+    position: relative;
+    }
+}
+
+
+
+// nav
+#nav{
+  display: none;
+}
+
+.navAdd {
+  display: flex;
+  background: #white;
+  color: contrast-color($nav-background);
+	cursor: pointer;
+	font-size: 2rem;
+	height: 100vh;
+	padding: 6rem 2rem 2rem 2rem;
+	position: fixed;
+	top: 0;
+	transition: left .5s;
+	width: $nav-width;
+	z-index: $nav-z-index;
+}
+
+// Horixontal sliding
+.horizontal_sliding{
+  display:block;
+  width: 100%;
+  overflow-x:scroll;
+  box-sizing: border-box;
+}
+
+.slide_container{
+  display: block;
+  white-space: nowrap;
+}
+
+.photo{
+  display: inline-block;
+  margin-right: -5px;
+}
+
+.photo img{
+  width: 500px;
+  object-fit: cover;
+  object-position: top left;
+}
+
+// body
+.logo_body{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 35px;
+}
+
+
+.Quienes{
+  box-sizing: border-box;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+.pa, .pa2{
+  grid-column-start: 3;
+  grid-column-end: 9;
+  margin-top: 20px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  font-weight: 500;
+  font-size: 18px;
+  color: grey;
+}
