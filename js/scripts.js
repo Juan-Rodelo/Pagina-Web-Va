@@ -9,17 +9,18 @@
 //   showMenu();
 // });
 
-(function(){
-  console.log("Ready!");
-});
+// (function(){
+//   console.log("Ready!");
+// });
+console.log("Ready!");
 
-$ (function() {
-  $(".menu_Icon").on("click", function(){
-    if($(".nav").hasClass(".navAdd")){
-      $(".nav").removeClass(".navAdd");
-    }
-    else {
-      $(".nav").addClass(".navAdd");
-    }
-  })
-  });
+// $ (function() {
+$(".menu_Icon").on("click", function () {
+  console.log("clicked")
+  if ($("nav").hasClass("navAdd")) {
+    $("#nav").removeClass("navAdd");
+  } else {
+    $("#nav").addClass("navAdd");
+  }
+});
+//   });
